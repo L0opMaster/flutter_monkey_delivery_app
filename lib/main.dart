@@ -1,3 +1,4 @@
+import 'package:delivery_food_app/view/main_tapview/main_tapbar_view.dart';
 import 'package:delivery_food_app/view/on_boarding/start_up_view_state.dart';
 import 'package:flutter/material.dart';
 
@@ -14,9 +15,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        fontFamily: "Metropolis"
+        fontFamily: "Metropolis",
+        // useMaterial3: true,
+        useMaterial3: true
       ),
-      home: const StartUpViewState(),
+      // home: const StartUpViewScreen(),
+      home: MainTapbar(),
     );
   }
 }

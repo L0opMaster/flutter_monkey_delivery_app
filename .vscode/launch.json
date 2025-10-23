@@ -11,12 +11,14 @@
             "type": "dart",
             "program": "D:/Flutter/Sunday_Cousre/delivery_food_app/lib/main.dart"
         },
-        // {
-        //     "name": "delivery_food_app (profile mode)",
-        //     "request": "launch",
-        //     "type": "dart",
-        //     "flutterMode": "profile"
-        // },
+        {
+            "name": "delivery_food_app (profile mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile",
+            "deviceId": "R9TNB09NL5J",
+            "program": "D:/Flutter/Sunday_Cousre/delivery_food_app/lib/main.dart"
+        },
         // {
         //     "name": "delivery_food_app (release mode)",
         //     "request": "launch",

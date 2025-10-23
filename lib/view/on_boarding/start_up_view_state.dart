@@ -1,28 +1,37 @@
 import 'package:delivery_food_app/view/login/welcome_view.dart';
 import 'package:flutter/material.dart';
 
-class StartUpViewState extends StatefulWidget {
-  const StartUpViewState({super.key});
+class StartUpViewScreen extends StatefulWidget {
+  const StartUpViewScreen({super.key});
 
   @override
-  State<StartUpViewState> createState() => _StartUpViewStateState();
+  State<StartUpViewScreen> createState() => _StartUpViewStateState();
 }
 
-class _StartUpViewStateState extends State<StartUpViewState> {
+class _StartUpViewStateState extends State<StartUpViewScreen> {
   @override
   void initState() {
+    // TODO: implement initState
     super.initState();
     goWelcomeScreen();
   }
 
-  void goWelcomeScreen() async {
+  void goWelcomeScreen() async{
     await Future.delayed(Duration(seconds: 2));
-    Navigator.push(
+    Navigator.pushReplacement(
       context,
-      MaterialPageRoute(
-        builder: (context) => WelcomeView() 
-      )
+      PageRouteBuilder(
+        transitionDuration: const Duration(milliseconds: 500), // ⏳ smooth duration
+        pageBuilder: (context, animation, secondaryAnimation) => const WelcomeScreen(),
+        transitionsBuilder: (context, animation, secondaryAnimation, child) {
+          return FadeTransition(
+            opacity: animation,
+            child: child,
+          );
+        },
+      ),
     );
+
   }
   @override
   Widget build(BuildContext context) {
@@ -31,19 +40,14 @@ class _StartUpViewStateState extends State<StartUpViewState> {
       body: Stack(
         alignment: Alignment.center,
         children: [
+          Image.asset('assets/image/splash_bg.png'),
           Image.asset(
-            'assets/image/splash_bg.png', 
-            width: media.width, 
-            height: media.height, 
-            fit: BoxFit.cover
-          ),
-          Image.asset(
-            'assets/image/app_logo.png', 
-            width: media.width * 0.5, 
-            height: media.height * 0.5, 
-            fit: BoxFit.contain
+            'assets/image/app_logo.png',
+            width: media.width * 0.6,
+            height: media.height * 0.45,
+            fit: BoxFit.contain,
           )
-        ] 
+        ],
       ),
     );
   }

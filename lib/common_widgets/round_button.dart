@@ -2,19 +2,22 @@ import 'package:delivery_food_app/common/color_extension.dart';
 import 'package:flutter/material.dart';
 
 enum RoundButtonType{
-  backgroundPrimary, 
+  backgroundColor,
   textPrimary,
 }
 
 class RoundButton extends StatelessWidget {
-  final VoidCallback onPressed;
   final String title;
-  final RoundButtonType type;
+  final VoidCallback onPressed;
+  final RoundButtonType type ;
+  final double ? height;
+  
   const RoundButton({
-    super.key,
+    super.key, 
+    required this.title, 
     required this.onPressed,
-    required this.title,
-    this.type = RoundButtonType.backgroundPrimary
+    this.type =  RoundButtonType.backgroundColor,
+    this.height = 60
   });
 
   @override
@@ -22,25 +25,25 @@ class RoundButton extends StatelessWidget {
     return InkWell(
       onTap: onPressed,
       child: Container(
-        height: 60,
         width: double.infinity,
+        height: height,
         alignment: Alignment.center,
         decoration: BoxDecoration(
-          color: type == RoundButtonType.backgroundPrimary ? TColor.primary : TColor.transparent,
-          borderRadius: BorderRadius.circular(25),
+          borderRadius: BorderRadius.circular(30),
+          color: type == RoundButtonType.backgroundColor ? TColor.primary : TColor.transparent,
           border: Border.all(
-            color: type == RoundButtonType.textPrimary ? TColor.primary : TColor.placeholder,
+            color: type == RoundButtonType.backgroundColor ? TColor.primary : TColor.primary,
             width: 2
           )
         ),
         child: Text(
           title,
           style: TextStyle(
-            fontSize: 17,
-            color: type ==  RoundButtonType.textPrimary ? TColor.primary : TColor.textfield,
-            fontWeight: FontWeight.w600
+            fontSize: 20,
+            fontWeight: FontWeight.w700,
+            color: type == RoundButtonType.backgroundColor ? TColor.textfield : TColor.primary
           ),
-        )
+        ),
       ),
     );
   }
