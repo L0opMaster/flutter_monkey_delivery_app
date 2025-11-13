@@ -10,11 +10,15 @@ class RoundTextfield extends StatelessWidget {
   final BorderRadiusGeometry borderRadius ;
   final double fontSize;
   final TextAlign alignment;
-  final bool ? padding;
+  final double ? height;
+  final EdgeInsetsGeometry ? padding;
+  final Widget ? lefticon;
   const RoundTextfield({
     super.key, 
-    this.padding = true,
+    this.padding ,
+    this.lefticon,
     this.controller, 
+    this.height,
     required this.hintText,  
     this.keybordTyoe, 
     required this.obscureText, 
@@ -27,12 +31,12 @@ class RoundTextfield extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 60,
+      height: height,
       width: width,
       alignment: Alignment.centerLeft,
       decoration:BoxDecoration(
         borderRadius: borderRadius,
-        color: TColor.textfield
+        color: TColor.placeholder
       ),
       child: TextField(
         textAlign: alignment,
@@ -41,13 +45,14 @@ class RoundTextfield extends StatelessWidget {
         keyboardType: keybordTyoe,
         obscureText: obscureText,
         decoration: InputDecoration(
-          contentPadding: padding == true ? EdgeInsets.symmetric(horizontal: 30, vertical: 8) : null,
-    //     enabledBorder: OutlineInputBorder(
+          contentPadding:  padding,
+        //     enabledBorder: OutlineInputBorder(
         //   borderSide: BorderSide(color: Colors.blue, width: 2.0),
         // ),
         enabledBorder: InputBorder.none,
           focusedBorder: InputBorder.none,
           hintText: hintText,
+          prefixIcon: lefticon,
           hintStyle: TextStyle(
             fontSize: fontSize,
             fontWeight: FontWeight.w500,

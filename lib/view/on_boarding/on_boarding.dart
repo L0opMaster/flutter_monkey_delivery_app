@@ -117,7 +117,7 @@ class _OnBoardingViewState extends State<OnBoardingView> {
                       // If we're on the last page, navigate to MainTapbarView
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => MainTapbar()),
+                        MaterialPageRoute(builder: (context) => MainTapbarView()),
                       );
                       print('next');
                     } else {

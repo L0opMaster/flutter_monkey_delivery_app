@@ -1,5 +1,5 @@
-import 'package:delivery_food_app/view/main_tapview/main_tapbar_view.dart';
-import 'package:delivery_food_app/view/on_boarding/start_up_view_state.dart';
+import 'package:delivery_food_app/view/login/welcome_view.dart';
+import 'package:delivery_food_app/view/on_boarding/on_boarding.dart';
 import 'package:flutter/material.dart';
 
 void main(List<String> args) {
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true
       ),
       // home: const StartUpViewScreen(),
-      home: MainTapbar(),
+      home: WelcomeScreen(),
     );
   }
 }

@@ -9,8 +9,9 @@ class RoundButtonIcon extends StatelessWidget {
   final VoidCallback onPressed;
   final String title;
   final Image icon;
+  final double height;
   final RoundBackgroundType colortype;
-  const RoundButtonIcon({super.key, required this.onPressed, required this.title, required this.icon, this.colortype = RoundBackgroundType.backgroundColor});
+  const RoundButtonIcon({super.key, required this.onPressed, required this.title, required this.icon, this.colortype = RoundBackgroundType.backgroundColor,  this.height = 65});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +19,7 @@ class RoundButtonIcon extends StatelessWidget {
       onTap: onPressed,
       child: Container(
         width: double.infinity,
-        height: 65,
+        height: height,
         alignment: Alignment.center,
         decoration: BoxDecoration(
           color: colortype == RoundBackgroundType.backgroundColor ? Colors.blue : TColor.primary,

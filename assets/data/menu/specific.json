@@ -1,0 +1,246 @@
+[
+  {
+    "name": "Italian",
+    "image": "assets/image/cat_3.png",
+    "items": [
+      {
+        "id": "1",
+        "name": "Truffle Mushroom Burger",
+        "image": "assets/image/1.jpg",
+        "description": "Juicy beef burger topped with creamy truffle mushroom sauce.",
+        "price": "10.50",
+        "location": "San Francisco",
+        "restaurant": "Gourmet Burger Co",
+        "rate": "4.9",
+        "rating": "1200"
+      },
+      {
+        "id": "2",
+        "name": "Four Cheese Pizza",
+        "image": "assets/image/2.jpg",
+        "description": "Classic pizza with mozzarella, parmesan, gorgonzola, and ricotta.",
+        "price": "13.00",
+        "location": "Chicago",
+        "restaurant": "Pizza Master",
+        "rate": "4.8",
+        "rating": "950"
+      },
+      {
+        "id": "3",
+        "name": "Mediterranean Veggie Wrap",
+        "image": "assets/image/3.jpg",
+        "description": "Healthy wrap loaded with grilled veggies and hummus.",
+        "price": "8.00",
+        "location": "Los Angeles",
+        "restaurant": "Green Eats",
+        "rate": "4.7",
+        "rating": "870"
+      },
+      {
+        "id": "4",
+        "name": "Spicy Buffalo Wings",
+        "image": "assets/image/4.jpg",
+        "description": "Crispy chicken wings tossed in hot buffalo sauce.",
+        "price": "9.50",
+        "location": "Houston",
+        "restaurant": "Wing Heaven",
+        "rate": "4.8",
+        "rating": "920"
+      },
+      {
+        "id": "5",
+        "name": "Ocean Delight Sushi",
+        "image": "assets/image/6.jpg",
+        "description": "Assorted sushi rolls with fresh seafood and avocado.",
+        "price": "16.00",
+        "location": "Miami",
+        "restaurant": "Sushi World",
+        "rate": "4.9",
+        "rating": "1100"
+      }
+    ]
+  },
+  {
+    "name": "Cambodian",
+    "image": "assets/image/cat_4.png",
+    "items": [
+      {
+        "id": "41",
+        "name": "Caramel Cappuccino",
+        "image": "assets/image/1.jpg",
+        "description": "Smooth cappuccino with a sweet caramel drizzle.",
+        "price": "4.00",
+        "location": "New York",
+        "restaurant": "Coffee House",
+        "rate": "4.8",
+        "rating": "980"
+      },
+      {
+        "id": "42",
+        "name": "Jasmine Green Tea",
+        "image": "assets/image/1.jpg",
+        "description": "Aromatic green tea infused with jasmine flowers.",
+        "price": "3.00",
+        "location": "Los Angeles",
+        "restaurant": "Tea Time",
+        "rate": "4.7",
+        "rating": "870"
+      },
+      {
+        "id": "43",
+        "name": "Citrus Lemonade",
+        "image": "assets/image/1.jpg",
+        "description": "Refreshing lemonade with fresh-squeezed lemons.",
+        "price": "2.50",
+        "location": "Chicago",
+        "restaurant": "Cool Drinks",
+        "rate": "4.6",
+        "rating": "750"
+      },
+      {
+        "id": "44",
+        "name": "Iced Mocha",
+        "image": "assets/image/1.jpg",
+        "description": "Chilled coffee blended with chocolate and milk.",
+        "price": "3.50",
+        "location": "Houston",
+        "restaurant": "Coffee House",
+        "rate": "4.8",
+        "rating": "890"
+      },
+      {
+        "id": "45",
+        "name": "Tropical Orange Juice",
+        "image": "assets/image/1.jpg",
+        "description": "assets/image/1.jpg",
+        "price": "3.00",
+        "location": "Miami",
+        "restaurant": "Juice Bar",
+        "rate": "4.7",
+        "rating": "910"
+      }
+    ]
+  },
+  {
+    "name": "French",
+    "image": "assets/image/cat_offer.png",
+    "items": [
+      {
+        "id": "71",
+        "name": "Velvet Chocolate Cake",
+        "image": "assets/image/1.jpg",
+        "description": "Rich dark chocolate cake with silky frosting.",
+        "price": "6.50",
+        "location": "Chicago",
+        "restaurant": "Sweet Treats",
+        "rate": "4.9",
+        "rating": "1020"
+      },
+      {
+        "id": "72",
+        "name": "Strawberry Cream Ice Cream",
+        "image": "assets/image/1.jpg",
+        "description": "Creamy ice cream with fresh strawberry chunks.",
+        "price": "4.50",
+        "location": "New York",
+        "restaurant": "Ice Cream Corner",
+        "rate": "4.8",
+        "rating": "970"
+      },
+      {
+        "id": "73",
+        "name": "Classic Cheesecake",
+        "image": "assets/image/1.jpg",
+        "description": "Creamy cheesecake with buttery biscuit base.",
+        "price": "5.50",
+        "location": "Los Angeles",
+        "restaurant": "Sweet Treats",
+        "rate": "4.7",
+        "rating": "880"
+      },
+      {
+        "id": "74",
+        "name": "Nutty Brownie",
+        "image": "assets/image/1.jpg",
+        "description": "Chocolate brownie loaded with crunchy nuts.",
+        "price": "3.75",
+        "location": "Houston",
+        "restaurant": "Bakery Delight",
+        "rate": "4.8",
+        "rating": "920"
+      },
+      {
+        "id": "75",
+        "name": "Tiramisu Classic",
+        "image": "assets/image/1.jpg",
+        "description": "Italian coffee-flavored dessert with layers of mascarpone.",
+        "price": "6.75",
+        "location": "Miami",
+        "restaurant": "Cafe Italiano",
+        "rate": "4.9",
+        "rating": "950"
+      }
+    ]
+  },
+  {
+    "name": "Japanese",
+    "image": "assets/image/cat_sri.png",
+    "items": [
+      {
+        "id": "101",
+        "name": "Matcha Chocolate Cake",
+        "image": "assets/image/1.jpg",
+        "description": "Rich chocolate cake infused with green tea flavor.",
+        "price": "6.50",
+        "location": "Tokyo",
+        "restaurant": "Sweet Treats",
+        "rate": "4.9",
+        "rating": "1020"
+      },
+      {
+        "id": "102",
+        "name": "Sakura Ice Cream",
+        "image": "assets/image/1.jpg",
+        "description": "Delicate cherry blossom flavored ice cream.",
+        "price": "4.75",
+        "location": "Kyoto",
+        "restaurant": "Ice Cream Corner",
+        "rate": "4.8",
+        "rating": "970"
+      },
+      {
+        "id": "103",
+        "name": "Japanese Cheesecake",
+        "image": "assets/image/1.jpg",
+        "description": "Light and fluffy cheesecake with a soft texture.",
+        "price": "5.75",
+        "location": "Osaka",
+        "restaurant": "Sweet Treats",
+        "rate": "4.8",
+        "rating": "900"
+      },
+      {
+        "id": "104",
+        "name": "Mochi Brownie",
+        "image": "assets/image/1.jpg",
+        "description": "Brownie with a soft mochi center and chocolate coating.",
+        "price": "4.00",
+        "location": "Sapporo",
+        "restaurant": "Bakery Delight",
+        "rate": "4.7",
+        "rating": "880"
+      },
+      {
+        "id": "105",
+        "name": "Matcha Tiramisu",
+        "image": "assets/image/1.jpg",
+        "description": "Traditional tiramisu with a Japanese matcha twist.",
+        "price": "6.80",
+        "location": "Nagoya",
+        "restaurant": "Cafe Italiano",
+        "rate": "4.9",
+        "rating": "950"
+      }
+    ]
+  }
+]

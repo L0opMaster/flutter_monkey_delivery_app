@@ -1,128 +1,140 @@
 import 'package:delivery_food_app/common/color_extension.dart';
 import 'package:delivery_food_app/common_widgets/round_tab_botton.dart';
+import 'package:delivery_food_app/view/Menu/menu.dart';
+import 'package:delivery_food_app/view/More/more.dart';
+import 'package:delivery_food_app/view/Profile/profile.dart';
 import 'package:delivery_food_app/view/home/home.dart';
+import 'package:delivery_food_app/view/offer/offer.dart';
 import 'package:flutter/material.dart';
 
-class MainTapbar extends StatefulWidget {
-  const MainTapbar({super.key});
+class MainTapbarView extends StatefulWidget {
+  const MainTapbarView({super.key});
 
   @override
-  State<MainTapbar> createState() => _MainTapbarState();
+  State<MainTapbarView> createState() => _MainTapbarViewState();
 }
 
-class _MainTapbarState extends State<MainTapbar> {
-  int slctTab = 2;
-  Widget slctTabview = Home();
+class _MainTapbarViewState extends State<MainTapbarView> {
+  int selected = 0;
+  Widget selected_page = HomeView();
+  PageStorageBucket storageBucket = PageStorageBucket();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      body: PageStorage(bucket: storageBucket, child: selected_page),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: SizedBox(
         height: 60,
         width: 60,
         child: FloatingActionButton(
-          onPressed:(){
-            
-            if (slctTab !=2) {
-              slctTab = 2;
-              slctTabview = const Home();
+          onPressed: (){
+            if (selected != 0) {
+              selected = 0;
+              selected_page = const HomeView();
             }
-            if(mounted){
+            if (mounted) {
               setState(() {
                 
               });
             }
           },
-          
           shape: CircleBorder(),
-          backgroundColor: slctTab == 2 ? TColor.primary : TColor.placeholder,
+          highlightElevation: 0,
+          elevation: 0,
+          backgroundColor:selected == 0 ? TColor.primary : Colors.white,
           child: Image.asset(
             'assets/image/tab_home.png',
-            width: slctTab == 2 ? 30 : 25,
-            height: slctTab == 2 ? 30 : 25,
-            fit: BoxFit.cover,
+            width: 30,
+            height: 30,
+            color: selected == 0 ? Colors.white : Colors.blueGrey,
           ), 
         ),
       ),
       bottomNavigationBar: BottomAppBar(
-        shape: const CircularNotchedRectangle(),
+        shadowColor: const Color(0xFF000000),
+        elevation: 2,
         notchMargin: 10,
-        elevation: 0,
-        height: 80,
-        color: Colors.white,
+        padding: EdgeInsets.symmetric(horizontal: 25 ,vertical: 15),
+        shape: CircularNotchedRectangle(),
+        color: const Color(0xFFFFFFFF),
         surfaceTintColor: Colors.white,
-        shadowColor: Colors.white,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            RoundTabBotton(
-              title: 'Home', 
-              icon: 'assets/image/tab_menu.png', 
-              isSlct: slctTab == 0, 
-              onTap: (){
-                if (slctTab != 0) {
-                  slctTab = 0;
-                  slctTabview = Container();
+        child: Container(
+          alignment: Alignment.center,
+          width: double.infinity,
+          // height: 80,
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              RoundManuTabButton(
+                title: 'Menu',
+                icon: 'assets/image/tab_menu.png', 
+                isSelected: selected == 2, 
+                onTab: (){
+                  if (selected != 2) {
+                    selected = 2;
+                    selected_page = const MenuViwState();
+                  }
+                  if (mounted) {
+                    setState(() {
+                      
+                    });
+                  }
                 }
-                if (mounted) {
-                  setState(() {
-                    
-                  });
+              ),
+              RoundManuTabButton(
+                title: 'Offer',
+                icon: 'assets/image/tab_offer.png', 
+                isSelected: selected == 1, 
+                onTab: (){
+                  if (selected != 1) {
+                    selected = 1;
+                    selected_page = const OfferViewState();
+                  }
+                  if (mounted) {
+                    setState(() {
+                      
+                    });
+                  }
                 }
-              }  
-            ),
-            RoundTabBotton(
-              title: 'Home', 
-              icon: 'assets/image/tab_offer.png', 
-              isSlct: slctTab == 1, 
-              onTap: (){
-                if (slctTab != 1) {
-                  slctTab = 1;
-                  slctTabview = Container();
+              ),
+              SizedBox(width: 20),
+              RoundManuTabButton(
+                title: 'More',
+                icon: 'assets/image/tab_more.png', 
+                isSelected: selected == 3, 
+                onTab: (){
+                  if (selected != 3) {
+                    selected = 3;
+                    selected_page = MoreState();
+                  }
+                  if (mounted) {
+                    setState(() {
+                      
+                    });
+                  }
                 }
-                if (mounted) {
-                  setState(() {
-                    
-                  });
+              ),
+              RoundManuTabButton(
+                title: 'Profile',
+                icon: 'assets/image/tab_profile.png', 
+                isSelected: selected == 4, 
+                onTab: (){
+                  if (selected != 4) {
+                    selected = 4;
+                    selected_page = const Profile();
+                  }
+                  if (mounted) {
+                    setState(() {
+                      
+                    });
+                  }
                 }
-              }  
-            ),
-            SizedBox(width: 50),
-            RoundTabBotton(
-              title: 'Home', 
-              icon: 'assets/image/tab_more.png', 
-              isSlct: slctTab == 3, 
-              onTap: (){
-                if (slctTab != 3) {
-                  slctTab = 3;
-                  slctTabview = Container();
-                }
-                if (mounted) {
-                  setState(() {
-                    
-                  });
-                }
-              }  
-            ),
-            RoundTabBotton(
-              title: 'Home', 
-              icon: 'assets/image/tab_profile.png', 
-              isSlct: slctTab == 4, 
-              onTap: (){
-                if (slctTab != 4) {
-                  slctTab = 4;
-                  slctTabview = Container();
-                }
-                if (mounted) {
-                  setState(() {
-                    
-                  });
-                }
-              }  
-            ),
-          ],
+              ),
+            ],
+          ),
         ),
-      )
+      ),
     );
   }
 }
